@@ -1,0 +1,934 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'langkah';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flangkah.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/langkah.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-1-d5df0069828e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">100</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">127</span>   <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">129</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>     <span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>   <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">96</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="k">if</span> <span class="p">(</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/Alin
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/Alin
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>jupyter-book
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jupyter-book
+  Downloading jupyter_book-1.0.0-py3-none-any.whl (43 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/43.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">43.7/43.7 kB</span> <span class=" -Color -Color-Red">1.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: click&lt;9,&gt;=7.1 in /usr/local/lib/python3.10/dist-packages (from jupyter-book) (8.1.7)
+Requirement already satisfied: Jinja2 in /usr/local/lib/python3.10/dist-packages (from jupyter-book) (3.1.3)
+Requirement already satisfied: jsonschema&lt;5 in /usr/local/lib/python3.10/dist-packages (from jupyter-book) (4.19.2)
+Requirement already satisfied: linkify-it-py&lt;3,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from jupyter-book) (2.0.3)
+Collecting myst-nb&lt;3,&gt;=1 (from jupyter-book)
+  Downloading myst_nb-1.0.0-py3-none-any.whl (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">79.9/79.9 kB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting myst-parser&lt;3,&gt;=1 (from jupyter-book)
+  Downloading myst_parser-2.0.0-py3-none-any.whl (77 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">77.2/77.2 kB</span> <span class=" -Color -Color-Red">8.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: pyyaml in /usr/local/lib/python3.10/dist-packages (from jupyter-book) (6.0.1)
+Requirement already satisfied: sphinx&lt;8,&gt;=5 in /usr/local/lib/python3.10/dist-packages (from jupyter-book) (5.0.2)
+Collecting sphinx-comments (from jupyter-book)
+  Downloading sphinx_comments-0.0.3-py3-none-any.whl (4.6 kB)
+Collecting sphinx-copybutton (from jupyter-book)
+  Downloading sphinx_copybutton-0.5.2-py3-none-any.whl (13 kB)
+Collecting sphinx-external-toc&lt;2,&gt;=1.0.1 (from jupyter-book)
+  Downloading sphinx_external_toc-1.0.1-py3-none-any.whl (26 kB)
+Collecting sphinx-jupyterbook-latex&lt;2,&gt;=1 (from jupyter-book)
+  Downloading sphinx_jupyterbook_latex-1.0.0-py3-none-any.whl (13 kB)
+Collecting sphinx-design&lt;1,&gt;=0.5 (from jupyter-book)
+  Downloading sphinx_design-0.5.0-py3-none-any.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.2/2.2 MB</span> <span class=" -Color -Color-Red">33.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting sphinx-thebe&lt;1,&gt;=0.3 (from jupyter-book)
+  Downloading sphinx_thebe-0.3.1-py3-none-any.whl (9.0 kB)
+Collecting sphinx-book-theme&lt;2,&gt;=1.1.0 (from jupyter-book)
+  Downloading sphinx_book_theme-1.1.2-py3-none-any.whl (400 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">400.8/400.8 kB</span> <span class=" -Color -Color-Red">28.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting sphinx_togglebutton (from jupyter-book)
+  Downloading sphinx_togglebutton-0.3.2-py3-none-any.whl (8.2 kB)
+Collecting sphinxcontrib-bibtex&lt;3,&gt;=2.5.0 (from jupyter-book)
+  Downloading sphinxcontrib_bibtex-2.6.2-py3-none-any.whl (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">41.0/41.0 kB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting sphinx-multitoc-numbering&lt;1,&gt;=0.1.3 (from jupyter-book)
+  Downloading sphinx_multitoc_numbering-0.1.3-py3-none-any.whl (4.6 kB)
+Requirement already satisfied: attrs&gt;=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&lt;5-&gt;jupyter-book) (23.2.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema&lt;5-&gt;jupyter-book) (2023.12.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema&lt;5-&gt;jupyter-book) (0.33.0)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema&lt;5-&gt;jupyter-book) (0.18.0)
+Requirement already satisfied: uc-micro-py in /usr/local/lib/python3.10/dist-packages (from linkify-it-py&lt;3,&gt;=2-&gt;jupyter-book) (1.0.3)
+Requirement already satisfied: importlib_metadata in /usr/local/lib/python3.10/dist-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (7.0.1)
+Requirement already satisfied: ipython in /usr/local/lib/python3.10/dist-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (7.34.0)
+Collecting jupyter-cache&gt;=0.5 (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book)
+  Downloading jupyter_cache-1.0.0-py3-none-any.whl (33 kB)
+Requirement already satisfied: nbclient in /usr/local/lib/python3.10/dist-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.9.0)
+Requirement already satisfied: nbformat&gt;=5.0 in /usr/local/lib/python3.10/dist-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.9.2)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/dist-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (4.9.0)
+Requirement already satisfied: ipykernel in /usr/local/lib/python3.10/dist-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.5.6)
+Requirement already satisfied: docutils&lt;0.21,&gt;=0.16 in /usr/local/lib/python3.10/dist-packages (from myst-parser&lt;3,&gt;=1-&gt;jupyter-book) (0.18.1)
+Requirement already satisfied: markdown-it-py~=3.0 in /usr/local/lib/python3.10/dist-packages (from myst-parser&lt;3,&gt;=1-&gt;jupyter-book) (3.0.0)
+Requirement already satisfied: mdit-py-plugins~=0.4 in /usr/local/lib/python3.10/dist-packages (from myst-parser&lt;3,&gt;=1-&gt;jupyter-book) (0.4.0)
+Collecting sphinx&lt;8,&gt;=5 (from jupyter-book)
+  Downloading sphinx-7.2.6-py3-none-any.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.2/3.2 MB</span> <span class=" -Color -Color-Red">40.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: sphinxcontrib-applehelp in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.0.8)
+Requirement already satisfied: sphinxcontrib-devhelp in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.0.6)
+Requirement already satisfied: sphinxcontrib-jsmath in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.0.1)
+Requirement already satisfied: sphinxcontrib-htmlhelp&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.0.5)
+Requirement already satisfied: sphinxcontrib-serializinghtml&gt;=1.1.9 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.1.10)
+Requirement already satisfied: sphinxcontrib-qthelp in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.0.7)
+Requirement already satisfied: Pygments&gt;=2.14 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.16.1)
+Requirement already satisfied: snowballstemmer&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.2.0)
+Requirement already satisfied: babel&gt;=2.9 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.14.0)
+Requirement already satisfied: alabaster&lt;0.8,&gt;=0.7 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (0.7.16)
+Requirement already satisfied: imagesize&gt;=1.3 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.4.1)
+Requirement already satisfied: requests&gt;=2.25.0 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.31.0)
+Requirement already satisfied: packaging&gt;=21.0 in /usr/local/lib/python3.10/dist-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (23.2)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from Jinja2-&gt;jupyter-book) (2.1.5)
+Collecting pydata-sphinx-theme&gt;=0.14 (from sphinx-book-theme&lt;2,&gt;=1.1.0-&gt;jupyter-book)
+  Downloading pydata_sphinx_theme-0.15.2-py3-none-any.whl (4.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.5/4.5 MB</span> <span class=" -Color -Color-Red">59.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting docutils&lt;0.21,&gt;=0.16 (from myst-parser&lt;3,&gt;=1-&gt;jupyter-book)
+  Downloading docutils-0.20.1-py3-none-any.whl (572 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">572.7/572.7 kB</span> <span class=" -Color -Color-Red">33.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting pybtex&gt;=0.24 (from sphinxcontrib-bibtex&lt;3,&gt;=2.5.0-&gt;jupyter-book)
+  Downloading pybtex-0.24.0-py2.py3-none-any.whl (561 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">561.4/561.4 kB</span> <span class=" -Color -Color-Red">36.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting pybtex-docutils&gt;=1.0.0 (from sphinxcontrib-bibtex&lt;3,&gt;=2.5.0-&gt;jupyter-book)
+  Downloading pybtex_docutils-1.0.3-py3-none-any.whl (6.4 kB)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from sphinx_togglebutton-&gt;jupyter-book) (67.7.2)
+Requirement already satisfied: wheel in /usr/local/lib/python3.10/dist-packages (from sphinx_togglebutton-&gt;jupyter-book) (0.42.0)
+Requirement already satisfied: sqlalchemy&lt;3,&gt;=1.3.12 in /usr/local/lib/python3.10/dist-packages (from jupyter-cache&gt;=0.5-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (2.0.27)
+Requirement already satisfied: tabulate in /usr/local/lib/python3.10/dist-packages (from jupyter-cache&gt;=0.5-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.9.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py~=3.0-&gt;myst-parser&lt;3,&gt;=1-&gt;jupyter-book) (0.1.2)
+Requirement already satisfied: jupyter-client&gt;=6.1.12 in /usr/local/lib/python3.10/dist-packages (from nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (6.1.12)
+Requirement already satisfied: jupyter-core!=5.0.*,&gt;=4.12 in /usr/local/lib/python3.10/dist-packages (from nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.7.1)
+Requirement already satisfied: traitlets&gt;=5.4 in /usr/local/lib/python3.10/dist-packages (from nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.7.1)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.10/dist-packages (from nbformat&gt;=5.0-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (2.19.1)
+Collecting latexcodec&gt;=1.0.4 (from pybtex&gt;=0.24-&gt;sphinxcontrib-bibtex&lt;3,&gt;=2.5.0-&gt;jupyter-book)
+  Downloading latexcodec-2.0.1-py2.py3-none-any.whl (18 kB)
+Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from pybtex&gt;=0.24-&gt;sphinxcontrib-bibtex&lt;3,&gt;=2.5.0-&gt;jupyter-book) (1.16.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme&gt;=0.14-&gt;sphinx-book-theme&lt;2,&gt;=1.1.0-&gt;jupyter-book) (4.12.3)
+Collecting accessible-pygments (from pydata-sphinx-theme&gt;=0.14-&gt;sphinx-book-theme&lt;2,&gt;=1.1.0-&gt;jupyter-book)
+  Downloading accessible_pygments-0.0.4-py2.py3-none-any.whl (29 kB)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.25.0-&gt;sphinx&lt;8,&gt;=5-&gt;jupyter-book) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.25.0-&gt;sphinx&lt;8,&gt;=5-&gt;jupyter-book) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.25.0-&gt;sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.25.0-&gt;sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2024.2.2)
+Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from importlib_metadata-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (3.17.0)
+Requirement already satisfied: ipython-genutils in /usr/local/lib/python3.10/dist-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.2.0)
+Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (6.3.2)
+Collecting jedi&gt;=0.16 (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book)
+  Downloading jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">76.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (4.4.2)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.10/dist-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (3.0.43)
+Requirement already satisfied: backcall in /usr/local/lib/python3.10/dist-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.2.0)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.1.6)
+Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.10/dist-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (4.9.0)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from jedi&gt;=0.16-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.8.3)
+Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.10/dist-packages (from jupyter-client&gt;=6.1.12-&gt;nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (23.2.1)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.10/dist-packages (from jupyter-client&gt;=6.1.12-&gt;nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (2.8.2)
+Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core!=5.0.*,&gt;=4.12-&gt;nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (4.2.0)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect&gt;4.3-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.7.0)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.2.13)
+Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.10/dist-packages (from sqlalchemy&lt;3,&gt;=1.3.12-&gt;jupyter-cache&gt;=0.5-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (3.0.3)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;pydata-sphinx-theme&gt;=0.14-&gt;sphinx-book-theme&lt;2,&gt;=1.1.0-&gt;jupyter-book) (2.5)
+Installing collected packages: latexcodec, jedi, docutils, accessible-pygments, sphinx, pybtex, sphinx_togglebutton, sphinx-thebe, sphinx-multitoc-numbering, sphinx-jupyterbook-latex, sphinx-external-toc, sphinx-design, sphinx-copybutton, sphinx-comments, pydata-sphinx-theme, pybtex-docutils, myst-parser, sphinxcontrib-bibtex, sphinx-book-theme, jupyter-cache, myst-nb, jupyter-book
+  Attempting uninstall: docutils
+    Found existing installation: docutils 0.18.1
+    Uninstalling docutils-0.18.1:
+      Successfully uninstalled docutils-0.18.1
+  Attempting uninstall: sphinx
+    Found existing installation: Sphinx 5.0.2
+    Uninstalling Sphinx-5.0.2:
+      Successfully uninstalled Sphinx-5.0.2
+Successfully installed accessible-pygments-0.0.4 docutils-0.20.1 jedi-0.19.1 jupyter-book-1.0.0 jupyter-cache-1.0.0 latexcodec-2.0.1 myst-nb-1.0.0 myst-parser-2.0.0 pybtex-0.24.0 pybtex-docutils-1.0.3 pydata-sphinx-theme-0.15.2 sphinx-7.2.6 sphinx-book-theme-1.1.2 sphinx-comments-0.0.3 sphinx-copybutton-0.5.2 sphinx-design-0.5.0 sphinx-external-toc-1.0.1 sphinx-jupyterbook-latex-1.0.0 sphinx-multitoc-numbering-0.1.3 sphinx-thebe-0.3.1 sphinx_togglebutton-0.3.2 sphinxcontrib-bibtex-2.6.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter-book<span class="w"> </span>create<span class="w"> </span>tugas/
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;/usr/local/bin/jupyter-book&quot;, line 8, in &lt;module&gt;
+    sys.exit(main())
+  File &quot;/usr/local/lib/python3.10/dist-packages/click/core.py&quot;, line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File &quot;/usr/local/lib/python3.10/dist-packages/click/core.py&quot;, line 1078, in main
+    rv = self.invoke(ctx)
+  File &quot;/usr/local/lib/python3.10/dist-packages/click/core.py&quot;, line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File &quot;/usr/local/lib/python3.10/dist-packages/click/core.py&quot;, line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File &quot;/usr/local/lib/python3.10/dist-packages/click/core.py&quot;, line 783, in invoke
+    return __callback(*args, **kwargs)
+  File &quot;/usr/local/lib/python3.10/dist-packages/jupyter_book/cli/main.py&quot;, line 339, in create
+    sh.copytree(template_path, book)
+  File &quot;/usr/lib/python3.10/shutil.py&quot;, line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File &quot;/usr/lib/python3.10/shutil.py&quot;, line 457, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File &quot;/usr/lib/python3.10/os.py&quot;, line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: &#39;tugas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter-book<span class="w"> </span>build<span class="w"> </span>tugas/
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">Running Jupyter-Book v1.0.0</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue">Source Folder: </span>/content/drive/MyDrive/Alin/tugas
+<span class=" -Color -Color-Bold -Color-Bold-Blue">Config Path: </span>/content/drive/MyDrive/Alin/tugas/_config.yml
+<span class=" -Color -Color-Bold -Color-Bold-Blue">Output Path: </span>/content/drive/MyDrive/Alin/tugas/_build/html
+<span class=" -Color -Color-Bold">Running Sphinx v7.2.6</span>
+[etoc] Changing master_doc to &#39;intro&#39;
+<span class=" -Color -Color-Bold">loading pickled environment... </span>checking bibtex cache... up to date
+done
+<span class=" -Color -Color-Bold">myst v2.0.0:</span> MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions={&#39;dollarmath&#39;, &#39;linkify&#39;, &#39;colon_fence&#39;, &#39;tasklist&#39;, &#39;substitution&#39;}, disable_syntax=[], all_links_external=False, url_schemes=(&#39;mailto&#39;, &#39;http&#39;, &#39;https&#39;), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes=&#39;tex2jax_process|mathjax_process|math|output_area&#39;, enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)
+<span class=" -Color -Color-Bold">myst-nb v1.0.0:</span> NbParserConfig(custom_formats={}, metadata_key=&#39;mystnb&#39;, cell_metadata_key=&#39;mystnb&#39;, kernel_rgx_aliases={}, eval_name_regex=&#39;^[a-zA-Z_][a-zA-Z0-9_]*$&#39;, execution_mode=&#39;force&#39;, execution_cache_path=&#39;&#39;, execution_excludepatterns=[], execution_timeout=30, execution_in_temp=False, execution_allow_errors=False, execution_raise_on_error=False, execution_show_tb=False, merge_streams=False, render_plugin=&#39;default&#39;, remove_code_source=False, remove_code_outputs=False, code_prompt_show=&#39;Show code cell {type}&#39;, code_prompt_hide=&#39;Hide code cell {type}&#39;, number_source_lines=False, output_stderr=&#39;show&#39;, render_text_lexer=&#39;myst-ansi&#39;, render_error_lexer=&#39;ipythontb&#39;, render_image_options={}, render_figure_options={}, render_markdown_format=&#39;commonmark&#39;, output_folder=&#39;build&#39;, append_css=True, metadata_to_fm=False)
+Using jupyter-cache at: /content/drive/MyDrive/Alin/tugas/_build/.jupyter_cache
+<span class=" -Color -Color-Bold">sphinx-multitoc-numbering v0.1.3:</span> Loaded
+The default value for `navigation_with_keys` will change to `False` in the next release. If you wish to preserve the old behavior for your site, set `navigation_with_keys=True` in the `html_theme_options` dict in your `conf.py` file. Be aware that `navigation_with_keys = True` has negative accessibility implications: https://github.com/pydata/pydata-sphinx-theme/issues/1492
+<span class=" -Color -Color-Bold">building [mo]: </span>targets for 0 po files that are out of date
+<span class=" -Color -Color-Bold">writing output... </span>
+<span class=" -Color -Color-Bold">building [html]: </span>targets for 5 source files that are out of date
+<span class=" -Color -Color-Bold">updating environment: </span>0 added, 0 changed, 0 removed
+<span class=" -Color -Color-Bold">reading sources... </span>
+<span class=" -Color -Color-Bold">looking for now-outdated files... </span>none found
+<span class=" -Color -Color-Bold">preparing documents... </span>done
+<span class=" -Color -Color-Bold">copying assets... copying static files... </span>done
+<span class=" -Color -Color-Bold">copying extra files... </span>done
+done
+
+/content/drive/MyDrive/Alin/tugas/intro.md:1: WARNING: toctree contains reference to document &#39;tugas1&#39; that doesn&#39;t have a title: no link will be generated
+/content/drive/MyDrive/Alin/tugas/intro.md:1: WARNING: toctree contains reference to document &#39;tugas1&#39; that doesn&#39;t have a title: no link will be generated
+/content/drive/MyDrive/Alin/tugas/intro.md:1: WARNING: toctree contains reference to document &#39;tugas1&#39; that doesn&#39;t have a title: no link will be generated
+/content/drive/MyDrive/Alin/tugas/intro.md:1: WARNING: toctree contains reference to document &#39;tugas1&#39; that doesn&#39;t have a title: no link will be generated
+/content/drive/MyDrive/Alin/tugas/intro.md:1: WARNING: toctree contains reference to document &#39;tugas1&#39; that doesn&#39;t have a title: no link will be generated
+/content/drive/MyDrive/Alin/tugas/intro.md:1: WARNING: toctree contains reference to document &#39;tugas1&#39; that doesn&#39;t have a title: no link will be generated
+<span class=" -Color -Color-Bold">generating indices... </span>genindex /content/drive/MyDrive/Alin/tugas/intro.md:1: WARNING: toctree contains reference to document &#39;tugas1&#39; that doesn&#39;t have a title: no link will be generated
+done
+<span class=" -Color -Color-Bold">writing additional pages... </span>search /content/drive/MyDrive/Alin/tugas/intro.md:1: WARNING: toctree contains reference to document &#39;tugas1&#39; that doesn&#39;t have a title: no link will be generated
+done
+<span class=" -Color -Color-Bold">copying images... </span>[100%] <span class=" -Color -Color-Yellow">_build/jupyter_execute/9fdd49160ba4b72ea5f70519589c2621330484f0a3839431a2d627cb3184be06.png</span>
+<span class=" -Color -Color-Bold">dumping search index in English (code: en)... </span>done
+<span class=" -Color -Color-Bold">dumping object inventory... </span>done
+<span class=" -Color -Color-Bold">build succeeded, 8 warnings.</span>
+
+The HTML pages are in tugas/_build/html.
+
+===============================================================================
+
+Finished generating HTML for book.
+Your book&#39;s HTML pages are here:
+    tugas/_build/html/
+You can look at your book by opening this file in a browser:
+    tugas/_build/html/index.html
+Or paste this line directly into your browser bar:
+    file:///content/drive/MyDrive/Alin/tugas/_build/html/index.html            
+
+===============================================================================
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/Alin/tugas/_build/html
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/Alin/tugas/_build/html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>init
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reinitialized existing Git repository in /content/drive/MyDrive/Alin/tugas/_build/html/.git/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>add<span class="w"> </span>.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;230411100147@student.trunojoyo.ac.id&quot;</span>
+<span class="o">!</span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Wahyu055&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>230411100147@student.trunojoyo.ac.id
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://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@github.com/Wahyudi05/Alin
+<span class="o">!</span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>https://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@github.com/Wahyudi05/Alin
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>error: remote origin already exists.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ini_test&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>add<span class="w"> </span>README.md
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;upload pertama&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master 2040e39] upload pertama
+ 7 files changed, 7 insertions(+), 7 deletions(-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master<span class="w"> </span>--force
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enumerating objects: 17, done.
+Counting objects:   5% (1/17)
+Counting objects:  11% (2/17)
+Counting objects:  17% (3/17)
+Counting objects:  23% (4/17)
+Counting objects:  29% (5/17)
+Counting objects:  35% (6/17)
+Counting objects:  41% (7/17)
+Counting objects:  47% (8/17)
+Counting objects:  52% (9/17)
+Counting objects:  58% (10/17)
+Counting objects:  64% (11/17)
+Counting objects:  70% (12/17)
+Counting objects:  76% (13/17)
+Counting objects:  82% (14/17)
+Counting objects:  88% (15/17)
+Counting objects:  94% (16/17)
+Counting objects: 100% (17/17)
+Counting objects: 100% (17/17), done.
+Delta compression using up to 2 threads
+Compressing objects:  11% (1/9)
+Compressing objects:  22% (2/9)
+Compressing objects:  33% (3/9)
+Compressing objects:  44% (4/9)
+Compressing objects:  55% (5/9)
+Compressing objects:  66% (6/9)
+Compressing objects:  77% (7/9)
+Compressing objects:  88% (8/9)
+Compressing objects: 100% (9/9)
+Compressing objects: 100% (9/9), done.
+Writing objects:  11% (1/9)
+Writing objects:  22% (2/9)
+Writing objects:  33% (3/9)
+Writing objects:  44% (4/9)
+Writing objects:  55% (5/9)
+Writing objects:  66% (6/9)
+Writing objects:  77% (7/9)
+Writing objects:  88% (8/9)
+Writing objects: 100% (9/9)
+Writing objects: 100% (9/9), 852 bytes | 170.00 KiB/s, done.
+Total 9 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
+To https://github.com/Wahyudi05/Alin
+   d863941..2040e39  master -&gt; master
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
